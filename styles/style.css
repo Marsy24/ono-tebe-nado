@@ -17,16 +17,9 @@
 }
 
 .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
 }
 
 .list-reset {
@@ -90,8 +83,6 @@ a {
 .nav-list__link {
     font-size: 18px;
     line-height: 21px;
-    -webkit-transition: color .3s ease, background-color .3s ease;
-    -o-transition: color .3s ease, background-color .3s ease;
     transition: color .3s ease, background-color .3s ease;
 }
 
@@ -114,22 +105,13 @@ a {
 }
 
 .contacts {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    flex: 1;
+    justify-content: end;
 }
 
 .contacts-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    flex-direction: column;
+    align-items: start;
     margin-top: 5px;
     max-width: 240px;
 }
@@ -146,8 +128,6 @@ a {
 }
 
 .contacts-list__link {
-    -webkit-transition: color .3s ease, background-color .3s ease;
-    -o-transition: color .3s ease, background-color .3s ease;
     transition: color .3s ease, background-color .3s ease;
 }
 
@@ -191,9 +171,7 @@ a {
     position: absolute;
     top: calc(39.5% + 1px);
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .hero__word_three {
@@ -223,10 +201,6 @@ a {
     line-height: 25.83px;
     text-transform: uppercase;
 
-    -webkit-transition: color .3s ease, border-color .3s ease, background-color .3s ease;
-
-    -o-transition: color .3s ease, border-color .3s ease, background-color .3s ease;
-
     transition: color .3s ease, border-color .3s ease, background-color .3s ease;
 }
 
@@ -249,45 +223,30 @@ a {
 }
 
 .lots-list {
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    align-items: stretch;
     gap: 25px;
     margin-bottom: 30px;
 }
 
 .lots-list__item {
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    align-items: stretch;
 }
 
 .lots-list__content {
     position: relative;
     padding: 51px 40px 48px 40px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex-direction: column;
+    flex: 1;
     max-width: 334px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    -o-transition: transform .3s ease;
     transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 .lots-list__content:focus-within,
 .lots-list__content:hover {
-    -webkit-transform: scale(1.03);
-        -ms-transform: scale(1.03);
-            transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .lots-list__content::after {
@@ -343,8 +302,6 @@ a {
     border-bottom: 1px solid black;
     font-size: 20px;
     line-height: 23.48px;
-    -webkit-transition: color .3s ease, background-color .3s ease;
-    -o-transition: color .3s ease, background-color .3s ease;
     transition: color .3s ease, background-color .3s ease;
 }
 
@@ -359,22 +316,14 @@ a {
 }
 
 .about__container {
-    -webkit-box-align: unset;
-        -ms-flex-align: unset;
-            align-items: unset;
+    align-items: unset;
     gap: 72px;
 }
 
 .about__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 240px;
     height: 240px;
     background-color: black;
@@ -414,30 +363,19 @@ a {
 .footer__container {
     padding-left: 50px;
     padding-right: 50px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .footer__contacts {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-flex: unset;
-        -ms-flex: unset;
-            flex: unset;
+    justify-content: start;
+    flex: unset;
 }
 
 .footer__nav .nav-list {
     list-style: none;
     gap: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 
 .social-list {
@@ -448,14 +386,10 @@ a {
     display: block;
     width: 48px;
     height: 48px;
-    -webkit-transition: background-color .3s ease, border-radius 0.3 ease;
-    -o-transition: background-color .3s ease, border-radius 0.3 ease;
     transition: background-color .3s ease, border-radius 0.3 ease;
 }
 
 .social-list__icon path {
-    -webkit-transition: fill .3s ease;
-    -o-transition: fill .3s ease;
     transition: fill .3s ease;
 }
 
