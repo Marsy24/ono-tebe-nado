@@ -4,18 +4,6 @@
     padding: 0 24px;
 }
 
-.letter-06 {
-    letter-spacing: 0.6em;
-}
-
-.letter-08 {
-    letter-spacing: 0.8em;
-}
-
-.letter-09 {
-    letter-spacing: 0.9em;
-}
-
 .flex {
     display: flex;
     flex-direction: row;
@@ -26,11 +14,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-a {
-    text-decoration: none;
-    outline: none;
 }
 
 .main-title {
@@ -86,7 +69,7 @@ a {
     transition: color .3s ease, background-color .3s ease;
 }
 
-.nav-list :not(.nav-list__item_main) .nav-list__link {
+.nav-list__item:not(.nav-list__item_main) .nav-list__link {
     letter-spacing: 0.01em;
     border-bottom: 1px solid black;
 }
@@ -97,7 +80,6 @@ a {
     color: white;
 }
 
-.header__link,
 .header__logo {
     display: block;
     width: 148px;
@@ -107,16 +89,18 @@ a {
 .contacts {
     flex: 1;
     justify-content: end;
+    flex-direction: column;
+    max-width: 240px;
+    margin-left: auto;
 }
 
 .contacts-list {
     flex-direction: column;
-    align-items: start;
-    margin-top: 5px;
-    max-width: 240px;
+    align-self: start;
 }
 
-.contacts-list__item {
+.contacts-list__item,
+.contacts__address {
     font-size: 18px;
     line-height: 24.3px;
 }
@@ -139,11 +123,12 @@ a {
 
 .hero__container {
     position: relative;
-    background-image: url('../images/cover.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 757px;
+    z-index: 1;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 757px;
+    background: url('../images/cover.jpg') no-repeat center / cover;
 }
 
 .hero__container::before {
@@ -153,55 +138,60 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Затемнение */
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнение */
+    z-index: -1;
 }
 
-.hero__word {
-    display: block;
+.hero__title {
+
+    flex-direction: column;
+    flex: 1;
+    padding-top: 165px;
+    width: 100%;
 }
 
-.hero__word_one {
-    position: absolute;
-    top: calc(20% + 22px);
-    left: 50px;
+.hero__word_start {
+    word-spacing: -23px;
+    align-self: flex-start;
+    line-height: 115px;
 }
 
-.hero__word_two {
-    position: absolute;
-    top: calc(39.5% + 1px);
-    left: 50%;
-    transform: translateX(-50%);
+.hero__word_center {
+    margin-left: -30px;
+    word-spacing: -25px;
+    padding-top: 20px;
+    align-self: center;
 }
 
-.hero__word_three {
-    position: absolute;
-    bottom: calc(31% + 2px);
-    right: 20px;
+.hero__word_end {
+    word-spacing: -20px;
+    margin-right: -30px;
+    padding-top: 20px;
+    align-self: flex-end;
+}
+
+.hero__bottom {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 51px;
+    color: white;
 }
 
 .hero__subtitle {
-    position: absolute;
-    bottom: 61px;
-    left: 79px;
+    word-spacing: 19px;
+    padding-left: 28px;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
-    color: white;
 }
 
 .hero__link {
-    position: absolute;
     padding: 12px 32px 11px 31px;
-    bottom: 50px;
-    right: 50px;
-    color: white;
-    border: 1px solid white;
     font-size: 22px;
+    font-weight: 500;
     line-height: 25.83px;
+    border: 1px solid white;
     text-transform: uppercase;
-
-    transition: color .3s ease, border-color .3s ease, background-color .3s ease;
 }
 
 .hero__link:focus-visible,
@@ -223,6 +213,7 @@ a {
 }
 
 .lots-list {
+    flex-wrap: wrap;
     align-items: stretch;
     gap: 25px;
     margin-bottom: 30px;
@@ -238,6 +229,7 @@ a {
     flex-direction: column;
     flex: 1;
     max-width: 334px;
+    min-height: 563px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -274,15 +266,6 @@ a {
     font-size: 20px;
     line-height: 24px;
     color: white;
-}
-
-.lots-list__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
 }
 
 .lots-list__content_bg-film {
@@ -357,6 +340,7 @@ a {
 }
 
 .footer {
+    padding-top: 5px;
     padding-bottom: 88px;
 }
 
@@ -368,8 +352,11 @@ a {
 }
 
 .footer__contacts {
-    justify-content: start;
-    flex: unset;
+    margin-left: unset;
+}
+
+.footer__nav {
+    padding-left: 37px;
 }
 
 .footer__nav .nav-list {

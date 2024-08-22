@@ -22,12 +22,12 @@
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="/" class="nav-list__link">
+            <a href="#lots" class="nav-list__link">
               посмотреть лоты
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="/" class="nav-list__link">
+            <a href="#about" class="nav-list__link">
               об аукционе
             </a>
           </li>
@@ -36,7 +36,7 @@
       <a class="header__link" href="/">
         <img class="header__logo" src="./images/logo-black.svg" alt="Logo">
       </a>
-      <aside class="header__contacts contacts flex">
+      <address class="header__contacts contacts flex">
         <ul class="contacts__list contacts-list flex list-reset">
           <li class="contacts-list__item phone">
             <a href="tel:99995555555" class="contacts-list__link phone__link">
@@ -48,63 +48,74 @@
               info@sobaka.ge
             </a>
           </li>
-          <li class="contacts-list__item address">
-            <address>наб. Принсенграхт 263- 265, Амстердам</address>
-          </li>
         </ul>
-      </aside>
+        <p class="contacts__address">
+          наб. Принсенграхт 263- 265, Амстердам
+        </p>
+      </address>
     </div>
   </header>
 
   <main class="main">
     <section class="main__hero hero">
-      <div class="container hero__container">
-        <h1 class="main-title hero__title">
-          <span class="hero__word hero__word_one">О<span class="letter-06">но</span></span>
-          <span class="hero__word hero__word_two">те<span class="letter-06">бе</span></span>
-          <span class="hero__word hero__word_three"><span class="letter-06">н</span>адо</span>
+      <div class="container hero__container flex">
+        <h1 class="main-title hero__title flex">
+          <span class="hero__word hero__word_start">Он о</span>
+          <span class="hero__word hero__word_center">теб е</span>
+          <span class="hero__word hero__word_end">н адо</span>
         </h1>
 
-        <p class="hero__subtitle">аукцион<span style="letter-spacing: 0.8em;"> </span>вещей,<span
-            style="letter-spacing: 0.9em;"> </span>в<span style="letter-spacing: 0.85em;"> </span>которые<span
-            style="letter-spacing: 0.8em;"> </span>никто<span style="letter-spacing: 0.8em;"> </span>не<span
-            style="letter-spacing: 0.9em;"> </span>верил</p>
-        <a href="/" class="hero__link">Сделать ставку</a>
+        <div class="hero__bottom flex">
+          <p class="hero__subtitle">
+            Аукцион вещей, в которые никто не верил
+          </p>
+          <a href="/" class="hero__link">Сделать ставку</a>
+        </div>
       </div>
     </section>
 
-    <section class="main__lots lots">
+    <section id="lots" class="main__lots lots">
       <div class="container lots__container">
         <h2 class="second-title lots__title">Лоты</h2>
 
         <ul class="lots__list lots-list flex list-reset">
           <li class="lots-list__item flex">
-            <article class="lots-list__content lots-list__content_bg-film flex">
-              <h3 class="third-title lots-list__title">Фильм режиссёра, который бросил киношколу</h3>
-              <p class="lots-list__descr">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы
-                вы не знали, что режиссёр — Пол Томас Андерсон?</p>
-              <a href="/" class="lots-list__link"></a>
-            </article>
+            <a href="/" class="lots-list__link">
+              <article class="lots-list__content lots-list__content_bg-film flex">
+                <h3 class="third-title lots-list__title">Фильм режиссёра, который бросил киношколу</h3>
+                <p class="lots-list__descr">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы
+                  вы не знали, что режиссёр — Пол Томас Андерсон?
+                </p>
+              </article>
+            </a>
           </li>
           <li class="lots-list__item flex">
-            <article class="lots-list__content lots-list__content_bg-book flex">
-              <h3 class="third-title lots-list__title">Книга, где описан один скучный день из жизни рекламного агента
-              </h3>
-              <p class="lots-list__descr">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на
-                древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная
-                с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на
-                «Улисса» Джеймса Джойса?</p>
-              <a href="/" class="lots-list__link"></a>
-            </article>
+            <a href="/" class="lots-list__link">
+              <article class="lots-list__content lots-list__content_bg-book flex">
+                <h3 class="third-title lots-list__title">Книга, где описан один скучный день из жизни рекламного агента
+                </h3>
+                <p class="lots-list__descr">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами
+                  на
+                  древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы,
+                  начиная
+                  с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на
+                  «Улисса» Джеймса Джойса?
+                </p>
+              </article>
+            </a>
           </li>
           <li class="lots-list__item flex">
-            <article class="lots-list__content lots-list__content_bg-picture flex">
-              <h3 class="third-title lots-list__title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
-              <p class="lots-list__descr">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на
-                инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали,
-                что это — одна из революционных работ Кандинского?</p>
-              <a href="/" class="lots-list__link"></a>
-            </article>
+            <a href="/" class="lots-list__link">
+              <article class="lots-list__content lots-list__content_bg-picture flex">
+                <h3 class="third-title lots-list__title">Картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
+                <p class="lots-list__descr">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на
+                  инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не
+                  знали,
+                  что это — одна из революционных работ Кандинского?
+                </p>
+              </article>
+            </a>
           </li>
         </ul>
 
@@ -112,7 +123,7 @@
       </div>
     </section>
 
-    <section class="main__about about">
+    <section id="about" class="main__about about">
       <div class="container about__container flex">
         <a href="/" class="about__link">
           <img src="./images/logo-white.svg" alt="Logo" class="about__img">
@@ -135,7 +146,7 @@
 
   <footer class="footer">
     <div class="container footer__container flex">
-      <aside class="footer__contacts contacts flex">
+      <address class="footer__contacts contacts flex">
         <ul class="contacts__list contacts-list flex list-reset">
           <li class="contacts-list__item phone">
             <a href="tel:99995555555" class="contacts-list__link phone__link">
@@ -147,11 +158,9 @@
               info@sobaka.ge
             </a>
           </li>
-          <li class="contacts-list__item address">
-            <address>наб. Принсенграхт 263- 265, Амстердам</address>
-          </li>
         </ul>
-      </aside>
+        <p class="contacts__address">наб. Принсенграхт 263- 265, Амстердам</p>
+      </address>
 
       <nav class="footer__nav nav">
         <ul class="nav__list nav-list flex">
@@ -161,12 +170,12 @@
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="/" class="nav-list__link">
+            <a href="#lots" class="nav-list__link">
               посмотреть лоты
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="/" class="nav-list__link">
+            <a href="#about" class="nav-list__link">
               об аукционе
             </a>
           </li>
